@@ -1,0 +1,13 @@
+<div class="close">
+  <button class="button-close" mat-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div class="country-information">
+  <app-map
+    [arrLatLngItem]="data.arrLatLngItem"
+    [lngLat]="data.lngLat"
+    class="mapbox"
+  ></app-map>
+  <app-country-data [data]="data.country"></app-country-data>
+</div>

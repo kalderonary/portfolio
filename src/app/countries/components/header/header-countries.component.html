@@ -1,0 +1,56 @@
+<mat-toolbar>
+  <div class="logo" [routerLink]="['/countries']">
+    <img
+      alt="Countries"
+      rel="preload"
+      as="image"
+      width="140px"
+      height="28px"
+      src="assets/countries/img/logo.png"
+    />
+  </div>
+
+  <div class="search-box" [ngClass]="{ show: !showSearch ? true : '' }">
+    <app-countries-search class="search"></app-countries-search>
+    <button class="close" (click)="onToggle()" mat-button>
+      <mat-icon class="return">close</mat-icon>
+    </button>
+  </div>
+  <div class="side-right">
+    <div class="search-icon" *ngIf="!showSearch" (click)="onToggle()">
+      <mat-icon>search</mat-icon>
+    </div>
+    <button
+      mat-button
+      *ngIf="!showSearch"
+      (click)="setQuizType()"
+      aria-label="Quiz Type"
+    >
+      <img
+        alt="Countries Timer"
+        rel="preload"
+        as="image"
+        height="28px"
+        width="28px"
+        src="assets/countries/img/icon-timer.png"
+      />
+      <span class="quiz-type">Quiz by Continent</span>
+    </button>
+    <button
+      mat-button
+      class="show-quiz-type"
+      (click)="setQuizType()"
+      aria-label="Quiz Type"
+    >
+      <img
+        alt="Countries Timer"
+        rel="preload"
+        as="image"
+        height="28px"
+        width="28px"
+        src="assets/countries/img/icon-timer.png"
+      />
+      <span class="quiz-type">Quiz by Continent</span>
+    </button>
+  </div>
+</mat-toolbar>

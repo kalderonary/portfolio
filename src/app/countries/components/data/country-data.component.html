@@ -1,0 +1,63 @@
+<div class="country-title">
+  <img width="40px" height="20px" [src]="data.flags.png" />
+
+  <span>{{ data.name.common }}</span>
+</div>
+<div class="country-description">
+  <div class="geo">
+    <div class="item-description">
+      <p class="green">
+        Capital: <br />
+        <span>{{ data.capital[0] }}</span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="green">
+        Region: <br />
+        <span>{{ data.region }}</span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="green">
+        Subregion: <br />
+        <span>{{ data.subregion }}</span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="green">
+        Area: <br />
+        <span>{{ data.area | number }} km<sup>2</sup> </span>
+      </p>
+    </div>
+  </div>
+  <div class="social">
+    <div class="item-description">
+      <p class="orange">
+        Population:<br />
+        <span>{{ data.population | number }}</span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="red-pink">
+        Currencies:<br />
+        <span *ngFor="let item of data.currencies | ObjToArray"
+          >{{ item.name }} ({{ item.symbol }})<br />
+        </span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="purple">
+        Calling Code:<br />
+        <span *ngFor="let item of data.idd | ObjToArray">{{ item }}</span>
+      </p>
+    </div>
+    <div class="item-description">
+      <p class="blue">
+        Languages:<br />
+        <span *ngFor="let item of data.languages | ObjToArray"
+          >&nbsp;{{ item }},
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

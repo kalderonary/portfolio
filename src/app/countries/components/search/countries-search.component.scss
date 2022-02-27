@@ -1,0 +1,45 @@
+@import "countries-variables";
+
+form {
+  display: flex;
+  input {
+    font-family: open Sans;
+    padding-left: 1rem;
+    width: 21rem;
+    height: 2.2rem;
+    background: rgb(0, 0, 0);
+    border: 0.1rem solid $countries-gray;
+    color: white;
+    font-size: 1rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  mat-icon {
+    font-size: 1.4rem;
+    background: $countries-gray;
+    padding: 0.52em 0.7em 0.2em 0.7em;
+    color: rgb(148, 148, 148);
+    margin-top: -0.1rem;
+  }
+}
+.divider {
+  margin-top: 0.5rem;
+  border-bottom: 1px solid $countries-accent;
+}
+.value-search {
+  color: $countries-accent;
+}
+.spacer {
+  float: right;
+  color: $countries-subtitle;
+}
+.flag {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@media only screen and (max-width: 940px) {
+  mat-icon {
+    display: none;
+  }
+}

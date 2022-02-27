@@ -1,0 +1,44 @@
+@import "countries-variables";
+.close {
+  float: right;
+  margin-right: 3rem;
+  margin-top: -1rem;
+  .button-close {
+    position: fixed;
+    mat-icon {
+      color: $countries-accent;
+    }
+  }
+}
+
+.country-information {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-around;
+
+  .mapbox {
+    width: 450px;
+    height: 350px;
+    border: 1px solid #eaff00;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and(max-width: 414px) {
+  .close {
+    display: none;
+  }
+  .country-information {
+    max-height: 70vh;
+    .mapbox {
+      width: 320px;
+      height: 234px;
+      margin-bottom: 1.3rem;
+      margin-top: 1rem;
+    }
+  }
+}

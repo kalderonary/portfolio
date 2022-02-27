@@ -1,0 +1,43 @@
+<form>
+  <input
+    matInput
+    aria-label="Character"
+    [matAutocomplete]="auto"
+    [formControl]="searchCtrl"
+    placeholder="Search Countries..."
+  />
+  <mat-icon>search</mat-icon>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    <ng-container
+      *ngIf="countriesSearch.length > 0 && valueToSearch.length > 2"
+    >
+      <mat-option
+        *ngFor="let country of countriesSearch"
+        [value]="country.name.common"
+      >
+        <div style="height: 3.5rem" (click)="openCountry(country)">
+          <mat-selection-list>
+            <img
+              width="10%"
+              aria-hidden
+              class="flag"
+              [src]="country.flags.png"
+            />
+            <span>{{ country.name.common | slice: 0:25 }}</span>
+            <small class="spacer">{{ country.region }}</small>
+            <div class="divider"></div>
+          </mat-selection-list>
+        </div> </mat-option
+    ></ng-container>
+    <mat-option
+      disabled
+      *ngIf="countriesSearch.length === 0 && valueToSearch.length > 2"
+    >
+      <span class="value-search">{{ valueToSearch }} </span>is not found
+    </mat-option>
+    <div *ngIf="loadingCountry$ | async">
+      <app-loader [title]="'Country'"></app-loader>
+    </div>
+  </mat-autocomplete>
+</form>

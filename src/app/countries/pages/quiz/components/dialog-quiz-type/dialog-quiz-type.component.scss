@@ -1,0 +1,29 @@
+@import "countries-variables";
+.countries-dialog {
+  .continents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    .continent {
+      font-family: "countries";
+      cursor: pointer;
+      padding: 1rem;
+      border: 0.05rem solid #7f9f00;
+      border-radius: 0.2rem;
+      margin: 0.5rem 1rem;
+      text-align: center;
+
+      &:hover {
+        border: 0.05rem solid $bg-dark;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 411px) {
+  .countries-dialog {
+    .continents {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

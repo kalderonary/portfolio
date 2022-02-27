@@ -1,0 +1,47 @@
+<mat-sidenav-container class="mat-elevation-z12">
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <img
+        [routerLink]="['/']"
+        class="logo-header"
+        alt="OlamCode"
+        rel="preload"
+        as="image"
+        width="170px"
+        height="68px"
+        src="assets/olamcode/img/logo-new.png"
+      />
+
+      <span class="spacer"></span>
+      <div
+        class="go-rickandmorty"
+        [routerLink]="['/rickandmorty']"
+        routerLinkActive="active-rickandmorty"
+      >
+        <img
+          alt="Rick and Morty app"
+          rel="preload"
+          as="image"
+          width="180px"
+          height="81px"
+          src="assets/rickandmorty/img/next-app.png"
+        />
+      </div>
+      <div
+        class="go-countries"
+        [routerLink]="['/countries']"
+        routerLinkActive="active-countries"
+      >
+        <img
+          alt="Countries app"
+          rel="preload"
+          as="image"
+          width="120px"
+          height="47px"
+          src="assets/countries/img/next-app.png"
+        />
+      </div>
+      <div fxHide.xs></div>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

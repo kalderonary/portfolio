@@ -1,0 +1,85 @@
+@import "countries-variables";
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $countries-text;
+  font-size: 1rem;
+  font-family: "countries";
+  margin: 1rem;
+  h2 {
+    text-align: left;
+    color: white;
+    font-size: 1.5rem;
+  }
+  p {
+    color: rgb(122, 122, 122);
+    font-family: open Sans;
+    text-align: left;
+  }
+  span {
+    color: $countries-subtitle;
+  }
+  .message {
+    max-width: 600px;
+    margin-right: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    .card {
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+      border: 1px solid $bg-dark;
+      border-radius: 0.5rem;
+      display: grid;
+      grid-auto-rows: 1fr;
+      align-items: center;
+      .card-content {
+        padding: 0.5rem;
+        display: flex;
+        .card-icon {
+          mat-icon {
+            color: $countries-accent;
+            font-size: 2.5rem;
+          }
+        }
+        .card-description {
+          margin: 0;
+          margin-left: 2rem;
+
+          .title {
+            color: rgb(197, 211, 252);
+            margin-bottom: 0.2rem;
+          }
+          .description {
+            margin: 0;
+            span {
+              color: $countries-subtitle;
+            }
+          }
+        }
+      }
+    }
+  }
+  .world-map-img {
+    margin-bottom: 5rem;
+  }
+  button {
+    float: right;
+    &:hover {
+      color: $countries-accent;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    .message {
+      margin-right: 0;
+    }
+    .world-map-img {
+      width: 300px;
+      height: 187px;
+    }
+  }
+}

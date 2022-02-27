@@ -1,0 +1,51 @@
+<div class="intro">
+  <div class="message">
+    <h2>Welcome to Countries app</h2>
+    <p>
+      <span>Countries app</span> will allow you to test your knowledge and learn
+      about the most relevant information from all the countries of the world.
+    </p>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon"><mat-icon>quiz</mat-icon></div>
+        <div class="card-description">
+          <p class="description">
+            <span class="title"> Customizable Quiz</span><br />
+            <mat-icon>check</mat-icon>Choose the type of quiz by <b>world</b> or
+            <b>continents</b><br />
+            <mat-icon>check</mat-icon> Set quiz timer, number of questions and
+            answer options
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon"><mat-icon>travel_explore</mat-icon></div>
+        <div class="card-description">
+          <p class="description">
+            <span class="title">Interactive Map</span><br />
+            World explore with relevant information of each country.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button
+      [routerLink]="['/countries/quiz/byWorld']"
+      routerLinkActive="router-link-active"
+      mat-raised-button
+    >
+      Start
+    </button>
+  </div>
+  <div>
+    <img
+      alt="World Map"
+      class="world-map-img"
+      width="100%"
+      height="100%"
+      src="assets/countries/img/world-map.png"
+    />
+  </div>
+</div>

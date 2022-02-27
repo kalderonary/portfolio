@@ -1,0 +1,78 @@
+@import "countries-variables";
+.show {
+  visibility: hidden;
+}
+mat-toolbar {
+  justify-content: space-between;
+  align-items: center;
+  background: $bg-dark;
+  font-family: "countries";
+  .logo {
+    cursor: pointer;
+    img {
+      margin-top: 0.6em;
+      margin-left: 1em;
+    }
+    mat-icon {
+      display: none;
+    }
+  }
+  .close {
+    display: none;
+  }
+  .search-icon {
+    visibility: hidden;
+  }
+
+  .side-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .quiz-type {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      color: #eaff00;
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  mat-toolbar {
+    .search-box {
+      position: fixed;
+      display: flex;
+      width: 100%;
+      .search {
+        float: left;
+        margin-left: -0.8rem;
+        width: 85%;
+      }
+      .return {
+        display: flex;
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .close {
+        display: flex;
+      }
+    }
+    .search-icon {
+      visibility: visible;
+      mat-icon {
+        font-size: 2.2rem;
+        display: flex;
+        margin-right: 1.5rem;
+        margin-bottom: 0.3rem;
+        cursor: pointer;
+      }
+    }
+    .show-quiz-type {
+      display: none;
+    }
+    .quiz-type {
+      display: none;
+    }
+  }
+}

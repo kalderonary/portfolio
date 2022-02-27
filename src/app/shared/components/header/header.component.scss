@@ -1,0 +1,64 @@
+@import "olamcode-variables";
+mat-sidenav-container {
+  z-index: 10;
+  mat-sidenav {
+    width: 200px;
+    position: fixed;
+    background-color: $bg-dark;
+    img {
+      margin-top: 1rem;
+    }
+    mat-icon {
+      margin: 1em 0 0.5em 1em;
+    }
+  }
+  mat-sidenav-content {
+    overflow: hidden;
+    mat-toolbar {
+      background-color: $bg-dark;
+      height: $height-header;
+
+      .logo-header {
+        cursor: pointer;
+        margin-left: -1rem;
+      }
+      .spacer {
+        flex: 1 1 auto;
+      }
+      .go-rickandmorty {
+        &:hover {
+          filter: drop-shadow(2px 2px 1px rgb(0, 75, 10))
+            drop-shadow(-1px -1px 4px rgb(253, 249, 187));
+          opacity: 0.9;
+        }
+        margin-right: -1rem;
+        cursor: pointer;
+      }
+      .go-countries {
+        &:hover {
+          filter: drop-shadow(2px 2px 1px rgb(0, 75, 10))
+            drop-shadow(-1px -1px 2px rgb(253, 249, 187));
+          opacity: 0.9;
+        }
+        cursor: pointer;
+        margin-top: 0.7rem;
+      }
+
+      .active-rickandmorty {
+        display: none;
+      }
+      .active-countries {
+        display: none;
+      }
+      button {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .code-hr {
+    display: none;
+  }
+}
